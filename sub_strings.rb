@@ -6,7 +6,7 @@ def substrings(string, dictionary)
   
   userInput.each do |userWord|
     dictionary.each do |word|
-      substrings[word] += 1 if userWord.include?(word)
+      substrings[word] += 1 if userWord.downcase.include?(word)
     end  
   end
   print substrings
