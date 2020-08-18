@@ -9,7 +9,7 @@ def substrings(string, dictionary)
       substrings[word] += 1 if userWord.downcase.include?(word)
     end  
   end
-  print substrings
+  return substrings
 end
 
 substrings("Howdy partner, sit down! How's it going?", dictionary)
