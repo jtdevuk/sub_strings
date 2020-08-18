@@ -2,15 +2,14 @@ dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","o
 
 def substrings(string, dictionary)
   substrings = Hash.new(0)
-  dictionary.each do |word|
-  substrings[word] += 1 if string.include?(word)
+  userInput = string.split(" ")
+  
+  userInput.each do |userWord|
+    dictionary.each do |word|
+      substrings[word] += 1 if userWord.include?(word)
+    end  
   end
-  puts substrings
+  print substrings
 end
 
-
-substrings("below", dictionary)
 substrings("Howdy partner, sit down! How's it going?", dictionary)
-
-
-# try using array1.product(array2)
